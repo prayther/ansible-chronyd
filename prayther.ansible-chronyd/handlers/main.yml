@@ -1,0 +1,19 @@
+---
+# handlers file for ansible-ntpdate
+- name: stopped ntpd
+  service:
+    name: ntpd
+    state: stopped
+
+- name: disable ntpd
+  service:
+    name: ntpd
+    enabled: no
+    state: stopped
+
+- name: started chronyd
+  service:
+    name: chronyd
+    enabled: yes
+    state: started
+

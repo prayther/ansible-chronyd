@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-ntpdate
+chronyd_enabled: true
+# how many times chronyd should be called
+chronyd_runs: 3
+# the ntp server to use for ntpdate
+#ntpdate_server: "0.pool.ntp.org"

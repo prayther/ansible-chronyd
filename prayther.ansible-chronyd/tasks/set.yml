@@ -1,0 +1,8 @@
+---
+- name: Execute chronyd runs
+  command: "chronyd -q"
+  notify:
+    - started chronyd
+  with_sequence: count="{{ chronyd_runs|int }}"
+  when: chronyd_enabled
+  tags: chronyd-run

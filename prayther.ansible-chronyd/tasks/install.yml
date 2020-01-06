@@ -1,0 +1,6 @@
+- name: Install chronyd package
+  yum:
+    name: chrony
+    state: latest
+  when: chronyd_enabled
+  tags: install

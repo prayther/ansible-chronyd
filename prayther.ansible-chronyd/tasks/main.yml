@@ -1,0 +1,9 @@
+- name: Install chronyd package
+  import_tasks: install.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+- name: Stop chronyd service
+  import_tasks: stop.yml
+  when: ansible_facts['os_family']|lower == 'redhat'
+- name: Execute chronyd runs
+  import_tasks: set.yml
+  when: ansible_facts['os_family']|lower == 'redhat'

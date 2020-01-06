@@ -1,0 +1,7 @@
+---
+- name: chronyd
+  user: admin
+  become: true
+  hosts: all
+  roles:
+  - {role: prayther.ansible-chronyd}

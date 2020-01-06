@@ -1,0 +1,7 @@
+---
+- name: Stop chronyd service
+  service:
+    name: chronyd
+    state: stopped
+  when: chronyd_enabled and (ansible_distribution != "Debian" and ansible_distribution != "Ubuntu")
+  tags: chronyd-run
